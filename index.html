@@ -27,20 +27,20 @@
 <div class="main container mt-5 mb-5">
     <div class="row">
         <div class="col-md-6 col-xs-9">
-            <label for="addCreature">Bastonner une nouvelle créature : </label>
+            <label for="addMorphTypeCreature" class="font-weight-bold">Bastonner une nouvelle créature : </label>
         </div>
     </div>
-    <div class="row mt-1">
-        <div class="col-md-6 col-xs-9">
+    <div class="row mt-1 pb-4">
+        <div class="col-md-6 col-9">
             <select id="addMorphTypeCreature" class="form-control">
             </select>
         </div>
-        <div class="col-md-3 col-xs-3">
-            <button type="button" class="btn btn-success" onclick="addCreatureToFight()"><i class="fa fa-plus-circle"> </i></button>
+        <div class="col-md-3 col-3 btn-add-creature">
+            <div class="d-inline-block tip" onclick="addCreatureToFight()"><img src="public/img/btn_add_creature_final.png" width="50px"><span>BASTON !</span></div>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row pt-3 row-creatures">
         <div class="col-md-12 col-xs-12">
             <div id="creatures" class="row">
                 <input id="nbCreatures" type="hidden" value="0">

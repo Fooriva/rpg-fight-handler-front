@@ -26,7 +26,7 @@ function addHitZone(block){
         "<tr class='hit-zone'>" +
             "<td class='no-padding' width='60%'><input class='hit-zone-input' type='text' placeholder='Zone de dégâts' value=''></td>" +
             "<td class='no-padding' width='30%'><input class='hp-input' type='number' value='0'></td>" +
-            "<td class='text-center' width='10%'><i class='fa fa-minus-circle fa-warning' onclick='deleteBlock($(this).parent().parent())' title='Supprimer la zone de dégâts'></i></td>" +
+            "<td class='text-center' width='10%'><i class='fa fa-minus-circle' onclick='deleteBlock($(this).parent().parent())' title='Supprimer la zone de dégâts'></i></td>" +
         "</tr>";
     var lastTrHitZone = $('#' + block.getAttribute('id') + ' tr.hit-zone').last();
     if(lastTrHitZone.length > 0){
@@ -45,7 +45,7 @@ function constructCreatureBlock(bodyParts){
             "<tr class='hit-zone'>" +
                 "<td width='60%'>" + bodyParts[key] + "</td>" +
                 "<td class='no-padding' width='30%'><input class='hp-input' type='number' value='0'></td>" +
-                "<td class='text-center' width='10%'><i class='fa fa-minus-circle fa-warning' onclick='deleteBlock($(this).parent().parent())' title='Supprimer la zone de dégâts'></i></td>" +
+                "<td class='text-center' width='10%'><i class='fa fa-minus-circle tip' onclick='deleteBlock($(this).parent().parent())'><span>Cette créature ne s'encombre pas de membres inutiles.</span></i></td>" +
             "</tr>";
     }
 
@@ -66,10 +66,11 @@ function constructCreatureBlock(bodyParts){
                 "<tbody>" +
                     contentBodyPartsBlock +
                     "<tr class='add-hit-zone'>" +
-                        "<td colspan='3' class='text-center'><button type='button' class='btn btn-primary' onclick='addHitZone(" + blockId + ")'><i class='fa fa-plus-circle'></i> Ajouter une zone de dégâts</button></td>" +
-                    "</tr>" +
-                    "<tr>" +
-                        "<td colspan='3' class='text-center'><button type='button' class='btn btn-danger' onclick='deleteBlock(" + blockId + ")'><i class='fa fa-trash'></i> Supprimer la créature</button></td>" +
+                        "<td colspan='3' class='text-center'>" +
+                            "<div class='d-inline-block tip'><img src='./public/img/goblin.png' width='50px' onclick='addHitZone(" + blockId + ")'><span>Ajouter une zone de dégâts</span></div>" +
+                            "<div class='d-inline-block ml-5'></div>" +
+                            "<div class='d-inline-block tip'><img src='./public/img/skull.png' width='50px' onclick='deleteBlock(" + blockId + ")'><span>Cette créature est trop faible, elle est lamentablement décédée !</span></div>" +
+                        "</td>" +
                     "</tr>" +
                 "</tbody>" +
             "</table>" +
