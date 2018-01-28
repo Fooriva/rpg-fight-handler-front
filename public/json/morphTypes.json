@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Humanoïde",
+    "hitZones": ["Tête", "Corps", "Bras droit", "Bras gauche", "Jambe droite", "Jambe gauche"]
+  },
+  {
+    "name": "Non défini",
+    "hitZones": ["Corps"]
+  }
+]

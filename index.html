@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Overlock+SC' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="public/img/favicon.png">
+    <title>RPG Fight Handler</title>
+    <link rel="stylesheet" type="text/css" href="public/build/vendor/vendor.css">
+    <link rel="stylesheet" type="text/css" href="public/build/main.css">
+    <script type="text/javascript" src="public/build/vendor/vendor.js"></script>
+    <script type="text/javascript" src="public/build/main.js"></script>
+</head>
+
+<body>
+<!-- Start header -->
+<header class="header">
+
+</header>
+<!-- End header -->
+
+<div class="main container mt-5">
+    <div class="row">
+        <div class="col-md-6 col-xs-9">
+            <label for="addCreature">Bastonner une nouvelle créature : </label>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-md-6 col-xs-9">
+            <select id="addMorphTypeCreature" class="form-control">
+            </select>
+        </div>
+        <div class="col-md-3 col-xs-3">
+            <button type="button" class="btn btn-success" onclick="addCreatureToFight()"><i class="fa fa-plus-circle"> </i></button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <div id="creatures" class="row">
+                <input id="nbCreatures" type="hidden" value="0">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Start footer -->
+<footer class="footer">
+
+</footer>
+<!-- End footer -->
+</body>
+</html>
